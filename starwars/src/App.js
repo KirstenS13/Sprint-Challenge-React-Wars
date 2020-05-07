@@ -17,6 +17,7 @@ const App = () => {
     axios.get('https://swapi.py4e.com/api/people/2/')
     .then(response => {
       console.log(response);
+      setCharacters(response.data);
     })
     .catch(error => {
       console.log(error);
@@ -26,7 +27,6 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      
     </div>
   );
 }
