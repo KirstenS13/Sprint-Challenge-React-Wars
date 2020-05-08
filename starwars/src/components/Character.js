@@ -30,9 +30,14 @@ const InfoParagraph = styled.p`
 
 const Character = props => {
     return (
-        <CharacterCard className="character_card" key={props.id}>
+        <CharacterCard className="character_card">
             <Name>Name: {props.name}</Name>
             <InfoParagraph>Birth Year: {props.birth_year}</InfoParagraph>
+            <InfoParagraph>Gender: {props.gender}</InfoParagraph>
+            <InfoParagraph>Height: {props.height}</InfoParagraph>
+            <InfoParagraph>Mass: {props.mass}</InfoParagraph>
+            <InfoParagraph>Hair Color: {props.hair_color}</InfoParagraph>
+            <InfoParagraph>Eye Color: {props.eye_color}</InfoParagraph>
         </CharacterCard>
     );
 };
