@@ -23,9 +23,11 @@ export default function CharacterList(){
                 {characters.map(character => {
                     return (
                         <Character
+                            id={character.name}
                             name={character.name}
                             homeworld={character.homeworld}
                             birth_year={character.birth_year}
+                            species={character.species[0]}
                         />
                     );
                 })}
