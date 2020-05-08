@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CharacterCard = styled.li`
+const CharacterCard = styled.div`
     list-style-type: none;
     background-color: rgba(255, 255, 255, 0.5);
     width: 40rem;

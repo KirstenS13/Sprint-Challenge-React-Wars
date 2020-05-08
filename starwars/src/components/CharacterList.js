@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 import Character from './Character';
+
+const CharacterContainer = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+`
 
 export default function CharacterList(){
     const [characters, setCharacters] = useState([]);
@@ -19,7 +25,7 @@ export default function CharacterList(){
 
     return (
         <div className='character'>
-            <ul>
+            <CharacterContainer>
                 {characters.map(character => {
                     return (
                         <Character
@@ -34,7 +40,7 @@ export default function CharacterList(){
                         />
                     );
                 })}
-            </ul>
+            </CharacterContainer>
         </div>
     );
 }
