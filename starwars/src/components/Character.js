@@ -11,3 +11,5 @@ const Character = props => {
         </li>
     );
 };
+
+export default Character;
