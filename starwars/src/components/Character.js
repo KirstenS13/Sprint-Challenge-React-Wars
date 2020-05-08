@@ -16,8 +16,8 @@ const CharacterCard = styled.div`
     border-radius: 5px;
 `
 
-const Name = styled.h2`
-    font-size: 2rem;
+const Name = styled.h3`
+    font-size: 1.7rem;
     font-family: 'Lucida Console', Courier, monospace;
     margin: 0.5rem;
 `

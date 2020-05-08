@@ -1,8 +1,30 @@
-import React /* { useState, useEffect } */ from 'react';
+import React from 'react';
 import './App.css';
-//import axios from 'axios';
+import styled from 'styled-components';
 
 import CharacterList from './components/CharacterList';
+
+const Headline = styled.h1`
+  font-size: 4rem;
+  color: black;
+  font-family: 'Lucida Console', Courier, monospace;
+  margin: 20px 0;
+`
+
+const SubHeader = styled.h2`
+  font-size: 2rem;
+  color: black;
+  font-family: 'Lucida Console', Courier, monospace;
+  margin: 10px 0;
+`
+
+const HeadlineContainer = styled.div`
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -15,20 +37,13 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  /* useEffect(() => {
-    axios.get('https://swapi.py4e.com/api/people/2/')
-    .then(response => {
-      console.log(response);
-      setCharacters(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    })
-  }, []); */
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <HeadlineContainer>
+        <Headline className="Header">Star Wars Characters</Headline>
+        <SubHeader>And Their Physical Attributes</SubHeader>
+      </HeadlineContainer>
       <CharacterList/>
     </div>
   );
