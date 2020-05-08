@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const CharacterCard = styled.div`
     list-style-type: none;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     width: 40rem;
     height: auto;
     display: flex;
@@ -30,7 +30,7 @@ const InfoParagraph = styled.p`
 
 const Character = props => {
     return (
-        <CharacterCard className="character_card">
+        <CharacterCard className="character_card" key={props.id.toString()}>
             <Name>Name: {props.name}</Name>
             <InfoParagraph>Birth Year: {props.birth_year}</InfoParagraph>
             <InfoParagraph>Gender: {props.gender}</InfoParagraph>

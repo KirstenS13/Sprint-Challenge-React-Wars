@@ -26,9 +26,10 @@ export default function CharacterList(){
     return (
         <div className='character'>
             <CharacterContainer>
-                {characters.map(character => {
+                {characters.map((character, index) => {
                     return (
                         <Character
+                            id={index}
                             name={character.name}
                             birth_year={character.birth_year}
                             eye_color={character.eye_color}
